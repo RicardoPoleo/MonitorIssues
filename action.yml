@@ -1,13 +1,18 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Report OPEN Issues'
+description: 'Report issues that are OPEN to Ryver chat, based on provided labels'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  company:
+    description: 'Company that will receive the notification'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+    default: 'RandomCompany'
+  rvrToken:
+    required: true
+    default: 'randomRVR'
+  room:
+    required: true
+    default: 'otherRoom'
+  gh_token:
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
