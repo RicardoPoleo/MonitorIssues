@@ -5,7 +5,7 @@ branding:
   color: 'white'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: './index.js'
 inputs:
   repoToken:
     description: 'github token'
